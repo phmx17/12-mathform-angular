@@ -1,0 +1,15 @@
+<form [formGroup]="mathForm">
+  <div class="equation">
+    {{ a }} + {{ b }} =  <!-- using getter functions for a and b -->
+  </div>
+  <input appAnswerHighlight formControlName="answer" />
+</form>
+<div class="stats">
+  Average Time:
+  {{ secondsPerSolution | number: '1.1-3' }}
+</div>
+<!-- some debugging tools -->
+<!-- <hr>
+<div>Form is valid: {{ mathForm.valid }}</div>
+<div>Form values: {{ mathForm.value | json }}</div>
+<div>Form Errors: {{ mathForm.errors | json }}</div> -->
